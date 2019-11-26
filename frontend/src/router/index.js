@@ -28,27 +28,27 @@ const routes = [
         path:'sign-up',
         name:"SignUp",
         component:()=>import('../components/signUp.vue')
-      }
-    ]
-  },
-  {
-    path:'/host',
-    component:()=>import('../views/host.vue'),
-    children:[
-      {
-        path:'',
-        name:"Events",
-        component:()=>import('../components/host/events.vue')
       },
       {
-        path:'create-event',
-        name:"CreateEvent",
-        component:()=>import('../components/host/createEvent.vue')
-      },
-      {
-        path:'visitors/:slug',
-        name:"Visitors",
-        component:()=>import('../components/host/visitor.vue')
+        path:'host',
+        component:()=>import('../components/host/host.vue'),
+        children:[
+          {
+            path:'',
+            name:"Events",
+            component:()=>import('../components/host/events.vue')
+          },
+          {
+            path:'create-event',
+            name:"CreateEvent",
+            component:()=>import('../components/host/createEvent.vue')
+          },
+          {
+            path:'visitors/:slug',
+            name:"Visitors",
+            component:()=>import('../components/host/visitor.vue')
+          }
+        ]
       }
     ]
   },

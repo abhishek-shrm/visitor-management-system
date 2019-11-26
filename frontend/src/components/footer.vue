@@ -1,9 +1,11 @@
 <template>
-  <section>
-    <div class="block">
-      <h1 class="title is-3">Footer</h1>
-    </div>
-  </section>
+  <div class="block">
+    <footer class="footer">
+      <div class="content has-text-centered">
+      <p>Created By <strong>Abhishek Sharma</strong></p>
+      </div>
+    </footer>
+  </div>
 </template>
 
 <script>
@@ -24,8 +26,11 @@ export default {
 
 <style lang="scss" scoped>
   @import "~bulma/sass/utilities/_all";
+  
+  $footer-background-color: #F5F5F5;
+  $footer-padding:1rem 1rem 1rem;
 
-  .block>h1 {
+  .block{
     margin-top: 2em;
     text-align: center;
   }

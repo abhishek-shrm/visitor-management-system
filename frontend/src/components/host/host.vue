@@ -1,21 +1,15 @@
 <template>
   <div class="block">
-    <hostHeader></hostHeader>
       <router-view></router-view>
-    <hostFooter></hostFooter>
   </div>  
 </template>
 
 <script>
 
-import hostHeader from '../components/host/headerHost'
-import hostFooter from '../components/host/footerHost'
-
 export default {
 
   components:{
-    hostHeader,
-    hostFooter
+
   }
   
 }
