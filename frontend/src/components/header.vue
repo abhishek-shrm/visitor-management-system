@@ -43,7 +43,6 @@
         </div>
       </div>
     </nav>
-    <flash-message class="myCustomClass"></flash-message>
     </div>
   </section>
 </template>

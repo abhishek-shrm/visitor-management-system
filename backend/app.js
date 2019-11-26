@@ -28,11 +28,13 @@ db.once('open', function () {
 });
 
 //Routes
-var Home=require('./routes/home');
+var signUp=require('./routes/signUp');
 
 //Middlewares
-app.use('/',Home);
+app.use('/sign-up',signUp);
 
+
+//Starts the server
 var port = 3000;
 app.listen(process.env.PORT || port, () => {
   console.log('Server started on port ' + port)
