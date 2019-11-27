@@ -63,9 +63,12 @@ export default {
       document.querySelector('.navbar-menu').classList.toggle('is-active');
     },
     logout(){
-      this.$store.commit('logout');
-      this.$router.push({name:'Login'});
-      Swal.fire('Congratulations!!','You have logged out successfully!!','success');
+      Swal.fire('Congratulations!!','You have logged out successfully!!','success').then(result=>{
+        setTimeout(()=>{
+          this.$store.commit('logout');
+          this.$router.push({name:'Login'});
+        },500);
+      });
     } 
   },
   computed:{

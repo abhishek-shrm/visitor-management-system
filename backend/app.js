@@ -30,10 +30,12 @@ db.once('open', function () {
 //Routes
 var signUp=require('./routes/signUp');
 var logIn=require('./routes/logIn');
+var createEvent=require('./routes/createEvent');
 
 //Middlewares
 app.use('/sign-up',signUp);
 app.use('/login',logIn);
+app.use('/create-event',createEvent);
 
 //Starts the server
 var port = 3000;

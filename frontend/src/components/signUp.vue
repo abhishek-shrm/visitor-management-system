@@ -82,7 +82,6 @@ export default {
       };
       API().post('sign-up',hostData)
       .then(res=>{
-        console.log(res.data);
         if(res.data.errors){
           Swal.fire('Error!!',res.data.errors,'error');
         }
