@@ -12,22 +12,50 @@ const routes = [
       {
         path:'',
         name:"Home",
-        component:()=>import('../components/home.vue')
+        component:()=>import('../components/home.vue'),
+        beforeEnter: (to, from, next) => {
+          if(!store.state.loginToken&&!store.state.loginUsername){
+            next();
+          }else{
+            next('/host');
+          }
+        }
       },
       {
         path:'visitor-form',
         name:"VisitorForm",
-        component:()=>import('../components/form.vue')
+        component:()=>import('../components/form.vue'),
+        beforeEnter: (to, from, next) => {
+          if(!store.state.loginToken&&!store.state.loginUsername){
+            next();
+          }else{
+            next('/host');
+          }
+        }
       },
       {
         path:'login',
         name:"Login",
-        component:()=>import('../components/login.vue')
+        component:()=>import('../components/login.vue'),
+        beforeEnter: (to, from, next) => {
+          if(!store.state.loginToken&&!store.state.loginUsername){
+            next();
+          }else{
+            next('/host');
+          }
+        }
       },
       {
         path:'sign-up',
         name:"SignUp",
-        component:()=>import('../components/signUp.vue')
+        component:()=>import('../components/signUp.vue'),
+        beforeEnter: (to, from, next) => {
+          if(!store.state.loginToken&&!store.state.loginUsername){
+            next();
+          }else{
+            next('/host');
+          }
+        }
       },
       {
         path:'host',
@@ -36,17 +64,38 @@ const routes = [
           {
             path:'',
             name:"Events",
-            component:()=>import('../components/host/events.vue')
+            component:()=>import('../components/host/events.vue'),
+            beforeEnter: (to, from, next) => {
+              if(store.state.loginToken&&store.state.loginUsername){
+                next();
+              }else{
+                next('/login');
+              }
+            }
           },
           {
             path:'create-event',
             name:"CreateEvent",
-            component:()=>import('../components/host/createEvent.vue')
+            component:()=>import('../components/host/createEvent.vue'),
+            beforeEnter: (to, from, next) => {
+              if(store.state.loginToken&&store.state.loginUsername){
+                next();
+              }else{
+                next('/login');
+              }
+            }
           },
           {
             path:'visitors/:slug',
             name:"Visitors",
-            component:()=>import('../components/host/visitor.vue')
+            component:()=>import('../components/host/visitor.vue'),
+            beforeEnter: (to, from, next) => {
+              if(store.state.loginToken&&store.state.loginUsername){
+                next();
+              }else{
+                next('/login');
+              }
+            }
           }
         ]
       }

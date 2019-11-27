@@ -48,6 +48,9 @@
 </template>
 
 <script>
+
+import Swal from 'sweetalert2'
+
 export default {
   data(){
     return{
@@ -62,7 +65,7 @@ export default {
     logout(){
       this.$store.commit('logout');
       this.$router.push({name:'Login'});
-      this.flash('Logged out successfully!!','success');
+      Swal.fire('Congratulations!!','You have logged out successfully!!','success');
     } 
   },
   computed:{
