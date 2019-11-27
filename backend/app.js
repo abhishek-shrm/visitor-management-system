@@ -31,11 +31,13 @@ db.once('open', function () {
 var signUp=require('./routes/signUp');
 var logIn=require('./routes/logIn');
 var createEvent=require('./routes/createEvent');
+var events=require('./routes/eventList');
 
 //Middlewares
 app.use('/sign-up',signUp);
 app.use('/login',logIn);
 app.use('/create-event',createEvent);
+app.use('/events',events);
 
 //Starts the server
 var port = 3000;

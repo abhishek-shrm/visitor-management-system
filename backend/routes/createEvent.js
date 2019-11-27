@@ -1,6 +1,5 @@
 var express=require('express');
 var router=express.Router();
-var JWT=require('jsonwebtoken');
 var checkAuth=require('../check-auth');
 
 var Host=require('../models/hosts');
