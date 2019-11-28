@@ -7,7 +7,7 @@
           <img src="../assets/logo.png" width="112" height="52">
         </a>
         <a v-if="this.$store.state.loginUsername" id="brand" class="navbar-item" href="/host">
-          <img src="../assets/logo.png" width="112" height="52">
+          <img src="../assets/logo.png" width="112" height="70">
         </a>
 
         <a role="button" class="navbar-burger burger" @click="toggleClass" aria-label="menu" aria-expanded="false"
