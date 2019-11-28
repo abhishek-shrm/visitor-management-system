@@ -32,12 +32,14 @@ var signUp=require('./routes/signUp');
 var logIn=require('./routes/logIn');
 var createEvent=require('./routes/createEvent');
 var events=require('./routes/eventList');
+var visitorForm=require('./routes/visitorForm');
 
 //Middlewares
 app.use('/sign-up',signUp);
 app.use('/login',logIn);
 app.use('/create-event',createEvent);
 app.use('/events',events);
+app.use('/visitorForm',visitorForm);
 
 //Starts the server
 var port = 3000;
