@@ -9,7 +9,7 @@ router.post('/',checkAuth,(req,res)=>{
   //'checkAuth' authenticates the loginToken
   var slug=req.body.eventSlug;
   var username=req.body.username;
-  Visitor.find({$and:[{eventSlug:slug},{username:username}]}).sort({checkIn:1}).exec((err,result)=>{
+  Visitor.find({$and:[{eventSlug:slug},{username:username}]}).sort({name:1}).exec((err,result)=>{
     if(err){
       console.log(err);
     }else{
