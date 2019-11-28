@@ -9,7 +9,7 @@
       Create a new Event
     </router-link>
     </div>
-    <table class="table is-stripped is-hoverable">
+    <table class="table is-striped is-hoverable">
       <thead>
         <th scope="col">Event Name</th>
         <th scope="col"> Venue</th>

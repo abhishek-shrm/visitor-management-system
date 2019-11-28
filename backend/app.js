@@ -34,6 +34,7 @@ var createEvent=require('./routes/createEvent');
 var events=require('./routes/eventList');
 var visitorForm=require('./routes/visitorForm');
 var visitorList=require('./routes/visitorList');
+var checkOut=require('./routes/checkout');
 
 //Middlewares
 app.use('/sign-up',signUp);
@@ -42,6 +43,7 @@ app.use('/create-event',createEvent);
 app.use('/events',events);
 app.use('/visitorForm',visitorForm);
 app.use('/visitorList',visitorList);
+app.use('/checkout',checkOut);
 
 //Starts the server
 var port = 3000;

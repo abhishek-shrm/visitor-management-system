@@ -33,6 +33,7 @@ router.post('/',(req,res)=>{
           console.log(er);
         }
         if(a){
+          
           //sending message from 2factor api to host
           axios.post(`https://2factor.in/API/R1/?module=TRANS_SMS&apikey=${process.env.SMS_API_KEY}&to=${a.mobile}&from=VMSVIS&templatename=visitor-management-system&var1=${visitorDetails.event}&var2=${visitorDetails.name}&var3=${visitorDetails.event}&var4=${visitorDetails.email}&var5=${visitorDetails.mobile}&var6=${visitorDetails.checkIn}&var7=${visitorDetails.addressVisited}`).then(resp=>{
                 const msg = {
